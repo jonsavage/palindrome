@@ -25,8 +25,18 @@ func Test_IsPalindrome_WithThreeCharacterInvalidPalindrome_ReturnsFalse(t *testi
     Assert_IsNotPalindrome(t, "abc")
 }
 
-func Test_IsPalindrome_WithThreeCharacterValidPalindrome_ReturnsTrue(t *testing.T) {
+func Test_IsPalindrome_WithThreeCharacteValidPalindrome_ReturnsTrue(t *testing.T) {
     Assert_IsPalindrome(t, "aba")
+}
+
+func Test_IsPalindrome_WithFourCharacterValidPalindrome_ReturnsTrue(t *testing.T) {
+    Assert_IsPalindrome(t, "aaaa")
+    Assert_IsPalindrome(t, "a11a")
+}
+
+func Test_IsPalindrome_WithFourCharacterInvalidPalindrome_ReturnsFalse(t *testing.T) {
+    Assert_IsNotPalindrome(t, "aaaz")
+    Assert_IsNotPalindrome(t, "z11a")
 }
 
 func Assert_IsPalindrome(t *testing.T, candidate string) {
