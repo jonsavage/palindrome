@@ -22,3 +22,9 @@ func Test_IsPalindrome_WithTwoCharacterValidPalindrome_ReturnsTrue(t *testing.T)
 
     assert.True(t, result, "'aa' is a palindrome")
 }
+
+func Test_IsPalindrome_WithTwoCharacterInvalidPalindrome_ReturnsFalse(t *testing.T) {
+    result := IsPalindrome("ab")
+
+    assert.False(t, result, "'ab' is not a palindrome")
+}
