@@ -16,3 +16,9 @@ func Test_IsPalindrome_WithSingleCharacterString_ReturnsTrue(t *testing.T) {
 
     assert.True(t, result, "Single character strings are palindromes")
 }
+
+func Test_IsPalindrome_WithTwoCharacterValidPalindrome_ReturnsTrue(t *testing.T) {
+    result := IsPalindrome("aa")
+
+    assert.True(t, result, "'aa' is a palindrome")
+}
