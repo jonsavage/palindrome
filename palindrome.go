@@ -8,5 +8,5 @@ func IsPalindrome(candidate string) bool {
         return true
     }
 
-    return candidate[0] == candidate[1]
+    return candidate[0] == candidate[len(candidate)-1]
 }
